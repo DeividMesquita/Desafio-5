@@ -1,0 +1,234 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+/*HEADER*/
+.c-navbar {
+    background-color: #161642;
+}
+
+.c-navbar__menu {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    gap: 115px;
+}
+
+.c-navbar__links {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.c-navbar__links li a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #DDD627;
+}
+
+.c-navbar__links li a:hover {
+    color: #4949DB;
+}
+
+/*SECTION DESTAQUE*/
+.c-destaque {
+    background-image: url(/assets/img/destaque\ 1.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.c-destaque__degrade {
+    background-image: url(/assets/img/degradê\ destaque.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.c-destaque__content {
+    height: 980px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 188px;
+}
+
+.c-destaque__main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 180px;
+}
+
+.c-destaque__dots {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.c-destaque__btn {
+    background-color: transparent;
+    border-radius: 30px;
+    width: 30px;
+    height: 30px;
+    color: #DDD627;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    border-color: #DDD627;
+
+}
+
+.c-destaque__btn:hover {
+    background-color: #DDD627;
+    color: black;
+}
+
+.c-destaque__text {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.c-destaque__text h1 {
+    font-size: 72px;
+    line-height: 80px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.c-destaque__button {
+    width: 115px;
+    height: 40px;
+    border-radius: 36px;
+    background-color: #DDD627;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    border: none;
+}
+
+.c-destaque__button:hover {
+    background-color: #ccc729;
+    transition: 0, 9s;
+}
+
+.c-destaque__arrow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*SECTION CAVALEIROS DE ATENA*/
+
+.c-atena {
+    background-color: black;
+}
+
+.c-atena__content {
+    height: 868px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.c-atena__titulo h1 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #DDD627;
+}
+
+.c-atena__texto p {
+    width: 820px;
+    height: 640px;
+    font-size: 18px;
+    line-height: 22px;
+    color: #fff;
+}
+
+/*Accordion*/
+.c-section-accordion {
+    background-color:black;
+}
+
+
+.w__820 {
+    height: 531px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 0 12px;
+}
+
+.c-section-accordion__titulo{
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #DDD627;
+}
+
+.accordion_area {
+    width: 820px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion_box {
+    background-color: #161642;
+    border-radius: 10px;
+}
+
+.accordion_box h3 {
+    font-size: 21px;
+    line-height: 27px;
+    font-weight: 700;
+    color: #DDD627;
+    
+}
+
+.acc_trigger {
+    padding: 24px;
+    margin: 0;
+    font-weight: 700;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+.acc_trigger button {
+    border: none;
+    background-color: transparent;
+    margin-left: auto;
+}
+
+.acc_container {
+    display: none;
+    padding: 24px;
+    background-color: #272775;
+    height: 200px;
+    border:none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+.acc_container p {
+    font-size: 16px;
+    line-height: 19px;
+    color: #fff;
+}
