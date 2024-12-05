@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
 }
 
@@ -164,7 +165,7 @@
 
 
 .w__820 {
-    height: 531px;
+    height: 600px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -216,6 +217,15 @@
     margin-left: auto;
 }
 
+.acc_trigger img {
+    transition: transform 0.3s ease;
+}
+
+.acc_trigger img.rotated {
+    transform: rotate(180deg);
+}
+
+
 .acc_container {
     display: none;
     padding: 24px;
@@ -232,3 +242,100 @@
     line-height: 19px;
     color: #fff;
 }
+
+/*CAROUSEL*/
+
+.c-carousel {
+    background-color: black;
+}
+.c-carousel__box {
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+}
+
+.c-carousel__titulo h1 {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 700;
+    color: #DDD627;
+    
+}
+
+.c-carousel__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.owl-carousel {
+    flex: 1; /* Faz o carrossel ocupar o espaço restante */
+    overflow: hidden;
+}
+
+.item {
+    position: relative;
+    text-align: center;
+}
+
+.c-carousel__img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.c-carousel__overlay {
+    position: absolute;
+    bottom: 0; /* Coloca no fundo da imagem */
+    left: 0;
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+}
+
+.c-carousel__degrade {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1; /* Fica abaixo do texto */
+}
+
+.c-carousel__nome {
+    font-size: 21px;
+    line-height: 25px;
+    color: #fff;
+    font-weight: 700;
+    margin: 0;
+    position: relative;
+    z-index: 2; /* Fica acima do degradê */
+    padding: 8px 0; /* Adiciona um espaçamento entre o texto e as bordas */
+}
+
+.c-carousel__degrade-lateral {
+    position: absolute;
+    right: 0; /* Alinha ao lado direito */
+    top: 0;
+    height: 100%;
+    width: 300px;
+    z-index: 3; /* Certifique-se de que o degradê fique sobre o carrossel */
+    pointer-events: none; /* Impede que o degradê interfira na interação com o carrossel */
+}
+
+
+#myCarousel {
+    --f-carousel-spacing: 10px;
+    --f-carousel-slide-width: 100%;
+    --f-progress-color: #ff3520;
+  }
+
+  #myCarousel .f-carousel__slide {
+    padding: 50px;
+    background: #eee;
+  }
