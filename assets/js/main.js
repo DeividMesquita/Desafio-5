@@ -61,10 +61,22 @@ $(document).ready(function () {
 
 //FANCYBOX//
 
-new Carousel(document.getElementById("myCarousel"), {
-    Autoplay: {
-        timeout: 2000
-    }
-}, {
-    Autoplay
+Fancybox.bind("[data-fancybox='gallery']", {
+    Toolbar: {
+        display: ["close"],
+    },
+    Thumbs: {
+        autoStart: false, // Inicia os thumbnails automaticamente
+    },
+    captions: true, // Exibe as legendas da imagem
+});
+
+const carousel = document.querySelector('#carouselExample');
+const dots = document.querySelectorAll('.carousel-dots button');
+
+carousel.addEventListener('slid.bs.carousel', function (event) {
+    const activeIndex = event.to; // Índice do slide ativo
+    dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === activeIndex); // Ativa o dot correspondente
+    });
 });
