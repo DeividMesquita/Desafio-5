@@ -39,94 +39,16 @@
 }
 
 /*SECTION DESTAQUE*/
-.c-destaque {
-    background-image: url(/assets/img/destaque\ 1.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
 
-.c-destaque__degrade {
-    background-image: url(/assets/img/degradê\ destaque.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.c-destaque__content {
-    height: 980px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 188px;
-}
-
-.c-destaque__main {
+.tns-outer {
     display: flex;
     flex-direction: row-reverse;
-    align-items: center;
-    gap: 180px;
 }
 
-.c-destaque__dots {
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
+.item img {
+    width: 100%;
 }
 
-.c-destaque__btn {
-    background-color: transparent;
-    border-radius: 30px;
-    width: 30px;
-    height: 30px;
-    color: #DDD627;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 700;
-    border-color: #DDD627;
-
-}
-
-.c-destaque__btn:hover {
-    background-color: #DDD627;
-    color: black;
-}
-
-.c-destaque__text {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-}
-
-.c-destaque__text h1 {
-    font-size: 72px;
-    line-height: 80px;
-    color: #fff;
-    font-weight: 700;
-}
-
-.c-destaque__button {
-    width: 115px;
-    height: 40px;
-    border-radius: 36px;
-    background-color: #DDD627;
-    font-size: 16px;
-    line-height: 19px;
-    font-weight: 600;
-    border: none;
-}
-
-.c-destaque__button:hover {
-    background-color: #ccc729;
-    transition: 0, 9s;
-}
-
-.c-destaque__arrow {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /*SECTION CAVALEIROS DE ATENA*/
 
@@ -263,7 +185,6 @@
     line-height: 44px;
     font-weight: 700;
     color: #DDD627;
-
 }
 
 .c-carousel__wrapper {
@@ -280,7 +201,7 @@
     overflow: hidden;
 }
 
-.item {
+.owl-carousel .item {
     position: relative;
     text-align: center;
 }
@@ -464,7 +385,6 @@
 }
 
 .c-formulario__content {
-    width: 820px;
     height: 490px;
     display: flex;
     flex-direction: column;
@@ -477,4 +397,72 @@
     line-height: 44px;
     color: #DDD627;
     font-weight: 700;
+}
+
+.c-formulario__form {
+    width: 820px;
+}
+
+.c-formulario__form label {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.c-formulario__form input {
+    background-color: #161642;
+    border: none;
+}
+
+.c-formulario__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.c-formulario__btn button {
+    border: 1px solid #333;
+    border-radius: 36px;
+    width: 129px;
+    height: 40px;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 600;
+    background-color: #DDD627;
+}
+
+.c-formulario__btn button:hover {
+    background-color: #f7b500;
+}
+
+/*FOOTER*/
+
+.c-footer {
+    background-color: #161642;
+}
+
+.c-footer__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 283px;
+}
+
+.c-footer__list ul {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+
+.c-footer__list a {
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: 700;
+    color: #DDD627;
+    text-decoration: none;
 }

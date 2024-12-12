@@ -57,7 +57,27 @@ $(document).ready(function () {
     });
 });
 
-
+const slider = tns({
+    "container": "#vertical",
+    "items": 3,
+    "axis": "vertical",
+    "mouseDrag": true,
+    "center ": true,
+    "swipeAngle": true,
+    "nav": false,
+    "controls": false,
+    responsive: {
+        640: {
+          items: 1
+        },
+        700: {
+          items: 2
+        },
+        900: {
+          items: 1
+        }
+      }
+});
 
 //FANCYBOX//
 

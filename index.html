@@ -54,6 +54,13 @@
       rel="stylesheet"
       href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
+    />
+    <!--[if (lt IE 9)
+      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script
+    ><![endif]-->
 
     <title>SAINT SEIYA</title>
   </head>
@@ -72,9 +79,9 @@
             <ul class="c-navbar__links m-0">
               <li><a href="#cavaleiros de atena">Cavaleiros de Atena</a></li>
               <li><a href="#listas dos 88 cavaleiros">Os 88 cavaleiros</a></li>
-              <li><a href="#">Os 12 dourados</a></li>
-              <li><a href="#">As 12 casas</a></li>
-              <li><a href="#">Seja um cavaleiro!</a></li>
+              <li><a href="#dourados">Os 12 dourados</a></li>
+              <li><a href="#casas">As 12 casas</a></li>
+              <li><a href="#seja">Seja um cavaleiro!</a></li>
             </ul>
           </div>
         </nav>
@@ -83,30 +90,37 @@
 
     <main>
       <section class="c-destaque">
-        <div class="c-destaque__degrade">
-          <div class="container-xxl">
-            <div class="c-destaque__content">
-              <div class="c-destaque__main">
-                <div class="c-destaque__dots">
-                  <button class="c-destaque__btn">1</button>
-                  <button class="c-destaque__btn">2</button>
-                  <button class="c-destaque__btn">3</button>
-                  <button class="c-destaque__btn">4</button>
-                </div>
-                <div class="c-destaque__text">
-                  <h1 class="m-0">
-                    Conheça os Cavaleiros de Bronze, a base do exército da deusa
-                    Atena
-                  </h1>
-                  <button class="c-destaque__button">Veja Mais</button>
+        <div class="my-slider">
+          <div id="vertical_wrapper">
+            <div class="vertical" id="vertical">
+              <div class="item">
+                <div class="img img-1">
+                  <img src="assets/img/destaque 1.png" alt="">
+                  <div class="c-destaque__content">
+                    <div class="c-destaque__titulo">
+                      <h1 class="m-0">Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h1>
+                    </div>
+                    <div class="c-destaque__btn">
+                      <button>Veja mais</button>
+                    </div>
+                  </div>
+
                 </div>
               </div>
-              <div class="c-destaque__arrow">
-                <figure class="m-0">
-                  <a href="#"
-                    ><img src="/assets/img/seta destaque.png" alt=""
-                  /></a>
-                </figure>
+              <div class="item">
+                <div class="img img-2">
+                  <img src="assets/img/destaque 2.png" alt="">
+                </div>
+              </div>
+              <div class="item">
+                <div class="img img-3">
+                  <img src="assets/img/destaque 3.png" alt="">
+                </div>
+              </div>
+              <div class="item">
+                <div class="img img-4">
+                  <img src="assets/img/destaque 4.png" alt="">
+                </div>
               </div>
             </div>
           </div>
@@ -251,7 +265,7 @@
           <div class="c-carousel__content">
             <div class="c-carousel__box">
               <div class="c-carousel__titulo">
-                <h1 class="m-0">Os doze mais poderosos</h1>
+                <h1 class="m-0" id="dourados">Os doze mais poderosos</h1>
               </div>
               <div class="c-carousel__wrapper">
                 <div class="owl-carousel owl-theme">
@@ -464,7 +478,7 @@
         <div class="container-xxl">
           <div class="c-fancybox__content text-center">
             <div class="c-fancybox__titulo mb-4">
-              <h1 class="m-0">As doze casas</h1>
+              <h1 class="m-0" id="casas">As doze casas</h1>
             </div>
             <div
               id="carouselExample"
@@ -808,49 +822,82 @@
           <div class="row">
             <div class="c-formulario__content">
               <div class="c-formulario__titulo">
-                <h1 class="m-0">Seja um cavaleiro!</h1>
+                <h1 class="m-0" id="seja">Seja um cavaleiro!</h1>
               </div>
-              <form class="row g-3">
+              <form class="c-formulario__form row g-3">
                 <div class="col-md-6">
                   <label for="nome" class="form-label">Nome:</label>
-                  <input type="name" class="form-control" id="nome">
+                  <input type="name" class="form-control" id="nome" />
                 </div>
                 <div class="col-md-6">
                   <label for="email" class="form-label">E-mail: </label>
-                  <input type="email" class="form-control" id="email">
+                  <input type="email" class="form-control" id="email" />
                 </div>
                 <div class="col-3">
                   <label for="idade" class="form-label">Idade: </label>
-                  <input type="number" class="form-control" id="idade">
+                  <input type="number" class="form-control" id="idade" />
                 </div>
                 <div class="col-md-3">
                   <label for="altura" class="form-label">Altura: </label>
-                  <input type="text" class="form-control" id="altura">
+                  <input type="text" class="form-control" id="altura" />
                 </div>
                 <div class="col-md-3">
                   <label for="peso" class="form-label">Peso: </label>
-                  <input type="text" class="form-control" id="peso">
+                  <input type="text" class="form-control" id="peso" />
                 </div>
                 <div class="col-md-3">
-                  <label for="nascimento" class="form-label">Dia de nascimento: </label>
-                  <input type="date" class="form-control" id="nascimento">
+                  <label for="nascimento" class="form-label"
+                    >Dia de nascimento:
+                  </label>
+                  <input type="date" class="form-control" id="nascimento" />
                 </div>
-                <div class="col-md-2">
-                  <label for="sangue" class="form-label">Tipo sanguíneo: </label>
-                  <input type="text" class="form-control" id="sangue">
+                <div class="col-md-2 m-0">
+                  <label for="sangue" class="form-label"
+                    >Tipo sanguíneo:
+                  </label>
+                  <input type="text" class="form-control" id="sangue" />
                 </div>
                 <div class="col-md-5">
-                  <label for="local" class="form-label">Local de nascimento: </label>
-                  <input type="" class="form-control" id="loca">
+                  <label for="local" class="form-label"
+                    >Local de nascimento:
+                  </label>
+                  <input type="" class="form-control" id="loca" />
                 </div>
                 <div class="col-md-5">
-                  <label for="treino" class="form-label">Local de treinamento: </label>
-                  <input type="" class="form-control" id="treino">
+                  <label for="treino" class="form-label"
+                    >Local de treinamento:
+                  </label>
+                  <input type="" class="form-control" id="treino" />
                 </div>
-                <div class="col-12">
-                  <button type="submit" class="btn btn-primary">Registar</button>
+                <div class="c-formulario__btn">
+                  <button type="submit">Registar-se</button>
                 </div>
               </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="c-footer">
+        <div class="container-xxl">
+          <div class="c-footer__content">
+            <div class="c-footer__logo">
+              <figure class="m-0">
+                <img src="assets/img/logo.png" alt="Logo" />
+              </figure>
+            </div>
+            <div class="c-footer__list">
+              <ul>
+                <li><a href="#cavaleiros de atena">Cavaleiros de Atena</a></li>
+                <li><a href="">Os 88 cavaleiros</a></li>
+                <li><a href="">Os 12 dourados</a></li>
+              </ul>
+            </div>
+            <div class="c-footer__list">
+              <ul>
+                <li><a href="">12 casas</a></li>
+                <li><a href="">Seja um cavaleiro!</a></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -858,6 +905,8 @@
     </main>
 
     <!--SCRIPTS JQUERY E JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
+<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
