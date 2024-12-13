@@ -55,29 +55,44 @@ $(document).ready(function () {
             }
         }
     });
+    
+    
 });
 
 const slider = tns({
-    "container": "#vertical",
-    "items": 3,
-    "axis": "vertical",
-    "mouseDrag": true,
-    "center ": true,
-    "swipeAngle": true,
-    "nav": false,
-    "controls": false,
+    container: "#vertical",
+    items: 3,
+    axis: "vertical",
+    mouseDrag: true,
+    center: true,
+    swipeAngle: true,
+    nav: false, // Ativa os dots
+    controls: false,
     responsive: {
         640: {
-          items: 1
+            items: 1
         },
         700: {
-          items: 2
+            items: 2
         },
         900: {
-          items: 1
+            items: 1
         }
-      }
+    }
 });
+
+const buttons = document.querySelectorAll(".c-destaque__dots button");
+buttons.forEach((button, index) => {
+  button.addEventListener("click", () => {
+    // Muda para o slide correspondente
+    slider.goTo(index);
+
+    // Atualiza o botão ativo
+    buttons.forEach(btn => btn.classList.remove("active"));
+    button.classList.add("active");
+  });
+});
+
 
 //FANCYBOX//
 

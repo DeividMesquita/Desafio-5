@@ -40,13 +40,100 @@
 
 /*SECTION DESTAQUE*/
 
-.tns-outer {
+/* Contêiner principal do carousel */
+.my-slider {
+    position: relative;
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: column; /* Organiza os itens verticalmente */
 }
 
-.item img {
+/* Estilo da imagem do carousel */
+.img {
+    position: relative;
+}
+
+.img img {
+    display: block;
     width: 100%;
+    height: auto;
+}
+
+/* Centralizando o conteúdo sobre a imagem */
+.c-destaque__content {
+    position: absolute;
+    top: 50%;
+    left: 0; /* Alinha à esquerda */
+    transform: translateY(-50%);
+    text-align: left; /* Alinha o texto à esquerda */
+    color: white;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Estilo do título */
+.c-destaque__titulo h1 {
+    font-size: 72px;
+    font-weight: 700;
+    line-height: 80px;
+    width: 1030px;
+}
+
+/* Estilo do botão "Veja mais" */
+.c-destaque__btn button {
+    width: 115px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #DDD627;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 36px;
+}
+
+/* Contêiner dos dots (botões de navegação) */
+.c-destaque__dots {
+    position: absolute;
+    top: 50%;
+    right: 20px; /* Ajuste a distância da borda direita */
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column; /* Organiza os dots em coluna */
+    gap: 15px;
+    z-index: 3; /* Garante que os dots fiquem acima da imagem */
+}
+
+/* Estilo dos dots */
+.c-destaque__dots button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid #DDD627;
+    color: #DDD627;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Efeito ao passar o mouse e ao ativar os dots */
+.c-destaque__dots button.active,
+.c-destaque__dots button:hover {
+    background-color: #DDD627;
+    color: white;
+}
+
+/* Estilo para a imagem de degradê */
+.my-slider .degrade-img {
+    position: absolute;
+    bottom: 0; /* Coloca a imagem na parte inferior da imagem do carousel */
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 1; /* Garante que a imagem de degradê fique abaixo do conteúdo */
 }
 
 
