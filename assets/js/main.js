@@ -31,16 +31,53 @@ $(document).ready(function () {
 
     //CAROUSEL
 
+    // Carrossel do Destaque
+    $('#destaque').owlCarousel({
+        items: 1,
+        loop: true,
+        margin: 0,
+        center: true,
+        touchDrag: false,
+        mouseDrag: false,
+        animateOut: 'fadeOut',
+        autoplay: true,
+        autoplayTimeout: 5000,
+        autoplayHoverPause: true,
+        dots: false,
+        nav: false,
+        vertical: true
+    });
+
+    // Sincronizar dots com clique
+    $('.c-destaque__dots button').click(function () {
+        const index = $(this).data('slide');
+        $('#destaque').trigger('to.owl.carousel', [index, 300]);
+        $('.c-destaque__dots button').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // Sincronizar dots automaticamente com a troca do slide
+    $('#destaque').on('changed.owl.carousel', function (event) {
+        const currentIndex = event.item.index - event.relatedTarget._clones.length / 2;
+        const totalItems = event.item.count;
+
+        // Corrigir índice para o loop
+        const normalizedIndex = (currentIndex < 0) ? totalItems - 1 : currentIndex % totalItems;
+
+        $('.c-destaque__dots button').removeClass('active');
+        $('.c-destaque__dots button').eq(normalizedIndex).addClass('active');
+    });
+
     // Inicializar o Owl Carousel
     const owl = $('.owl-carousel').owlCarousel({
-        items: 12,
+        items: 1,
         loop: false,
         margin: 20,
         center: false,
         autoWidth: true,
         nav: false,
         dots: false,
-        startPosition: 1,
+        startPosition: 0,
         slideTransition: 'ease-in',
         responsive: {
             0: {
@@ -55,45 +92,26 @@ $(document).ready(function () {
             }
         }
     });
-    
-    
+
+
 });
 
-const slider = tns({
-    container: "#vertical",
-    items: 3,
-    axis: "vertical",
-    mouseDrag: true,
-    center: true,
-    swipeAngle: true,
-    nav: false, // Ativa os dots
-    controls: false,
-    responsive: {
-        640: {
-            items: 1
-        },
-        700: {
-            items: 1
-        },
-        900: {
-            items: 1
-        }
-    }
-});
-
-const buttons = document.querySelectorAll(".c-destaque__dots button");
-buttons.forEach((button, index) => {
-  button.addEventListener("click", () => {
-    // Muda para o slide correspondente
-    slider.goTo(index);
-
-    // Atualiza o botão ativo
-    buttons.forEach(btn => btn.classList.remove("active"));
-    button.classList.add("active");
+document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const menuClose = document.getElementById("menu-close");
+    const offcanvasMenu = document.getElementById("offcanvas-menu");
+  
+    // Abrir o menu
+    menuToggle.addEventListener("click", () => {
+      offcanvasMenu.classList.add("active");
+    });
+  
+    // Fechar o menu
+    menuClose.addEventListener("click", () => {
+      offcanvasMenu.classList.remove("active");
+    });
   });
-});
-
-
+  
 //FANCYBOX//
 
 Fancybox.bind("[data-fancybox='gallery']", {

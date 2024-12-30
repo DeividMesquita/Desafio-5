@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/img/155556.svg"
+    />
+
     <!--CSS-->
     <link rel="stylesheet" href="assets/css/style.css" />
 
@@ -54,29 +61,22 @@
       rel="stylesheet"
       href="OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/tiny-slider.css"
-    />
-    <!--[if (lt IE 9)
-      ]><script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.4/min/tiny-slider.helper.ie8.js"></script
-    ><![endif]-->
 
     <title>SAINT SEIYA</title>
   </head>
   <body>
     <header class="c-navbar">
       <div class="container-xxl">
-        <nav class="c-navbar__menu">
+        <div class="c-navbar__menu">
           <div class="c-navbar__logo">
             <figure class="m-0">
-              <a href="#"
-                ><img src="assets/img/logo.png" alt="SAINT SEIYA -logo"
-              /></a>
+              <a href="#">
+                <img src="assets/img/logo.png" alt="SAINT SEIYA - logo" />
+              </a>
             </figure>
           </div>
           <div class="c-navbar__list">
-            <ul class="c-navbar__links m-0">
+            <ul class="c-navbar__links">
               <li><a href="#cavaleiros de atena">Cavaleiros de Atena</a></li>
               <li><a href="#listas dos 88 cavaleiros">Os 88 cavaleiros</a></li>
               <li><a href="#dourados">Os 12 dourados</a></li>
@@ -84,111 +84,129 @@
               <li><a href="#seja">Seja um cavaleiro!</a></li>
             </ul>
           </div>
-        </nav>
+          <div class="c-navbar__mobile">
+            <i class="fa-solid fa-bars" id="menu-toggle"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menu Off-Canvas -->
+      <div class="c-navbar__offcanvas" id="offcanvas-menu">
+        <div class="c-navbar__offcanvas-header">
+          <i class="fa-solid fa-times" id="menu-close"></i>
+        </div>
+        <ul class="c-navbar__links">
+          <li><a href="#cavaleiros de atena">Cavaleiros de Atena</a></li>
+          <li><a href="#listas dos 88 cavaleiros">Os 88 cavaleiros</a></li>
+          <li><a href="#dourados">Os 12 dourados</a></li>
+          <li><a href="#casas">As 12 casas</a></li>
+          <li><a href="#seja">Seja um cavaleiro!</a></li>
+        </ul>
       </div>
     </header>
 
     <main>
       <section class="c-destaque">
-        <div class="my-slider">
-            <!-- Carousel principal -->
-            <div id="vertical_wrapper">
-                <div class="vertical" id="vertical">
-                    <!-- Slide 1 -->
-                    <div class="item">
-                        <div class="img img-1">
-                            <div class="img-overlay">
-                                <img src="assets/img/destaque 1.png" alt="">
-                                <img src="assets/img/degradê destaque.png" class="degrade-overlay" alt="">
-                            </div>
-                            <div class="container-xxl">
-                                <div class="c-destaque__content">
-                                    <div class="c-destaque__titulo col-9">
-                                        <h1 class="m-0">Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h1>
-                                    </div>
-                                    <div class="c-destaque__btn">
-                                        <button>Veja mais</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <!-- Slide 2 -->
-                    <div class="item">
-                      <div class="img img-2">
-                          <div class="img-overlay">
-                              <img src="assets/img/destaque 2.png" alt="">
-                              <img src="assets/img/degradê destaque.png" class="degrade-overlay" alt="">
-                          </div>
-                          <div class="container-xxl">
-                              <div class="c-destaque__content">
-                                  <div class="c-destaque__titulo col-9">
-                                      <h1 class="m-0">Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h1>
-                                  </div>
-                                  <div class="c-destaque__btn">
-                                      <button>Veja mais</button>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-
-                  <!-- Slide 3 -->
-                  <div class="item">
-                    <div class="img img-3">
-                        <div class="img-overlay">
-                            <img src="assets/img/destaque 3.png" alt="">
-                            <img src="assets/img/degradê destaque.png" class="degrade-overlay" alt="">
-                        </div>
-                        <div class="container-xxl">
-                            <div class="c-destaque__content">
-                                <div class="c-destaque__titulo col-9">
-                                    <h1 class="m-0">Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h1>
-                                </div>
-                                <div class="c-destaque__btn">
-                                    <button>Veja mais</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Slide 4 -->
-                <div class="item">
-                  <div class="img img-4">
-                      <div class="img-overlay">
-                          <img src="assets/img/destaque 4.png" alt="">
-                          <img src="assets/img/degradê destaque.png" class="degrade-overlay" alt="">
-                      </div>
-                      <div class="container-xxl">
-                          <div class="c-destaque__content">
-                              <div class="c-destaque__titulo col-9">
-                                  <h1 class="m-0">Conheça os Cavaleiros de Bronze, a base do exército da deusa Atena</h1>
-                              </div>
-                              <div class="c-destaque__btn">
-                                  <button>Veja mais</button>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-                </div>
+        <!-- Carousel principal -->
+        <div class="c-destaque-carousel owl-carousel" id="destaque">
+          <div
+            class="c-destaque__item item"
+            style="background-image: url(/assets/img/destaque\ 1.png)"
+          >
+            <div class="c-destaque__degrade">
+              <img src="assets/img/degradê destaque.png" alt="" />
             </div>
-    
             <div class="container-xxl">
-                <div class="c-destaque__dots">
-                    <button data-slide="0" class="active">1</button>
-                    <button data-slide="1">2</button>
-                    <button data-slide="2">3</button>
-                    <button data-slide="3">4</button>
+              <div class="c-destaque__content">
+                <div class="c-destaque__titulo col-11 col-md-12 col-lg-10">
+                  <h1>
+                    Conheça os Cavaleiros de Bronze, a base do exército da deusa
+                    Atena
+                  </h1>
                 </div>
+                <div class="c-destaque__btn">
+                  <button>Veja Mais</button>
+                </div>
+              </div>
             </div>
+          </div>
+          <div
+            class="c-destaque__item item"
+            style="background-image: url(/assets/img/destaque\ 2.png)"
+          >
+            <div class="c-destaque__degrade">
+              <img src="assets/img/degradê destaque.png" alt="" />
+            </div>
+            <div class="container-xxl">
+              <div class="c-destaque__content">
+                <div class="c-destaque__titulo col-11 col-md-12 col-lg-10">
+                  <h1>
+                    Os guerreiros da classe intermediária na ordem dos
+                    Cavaleiros de Atena
+                  </h1>
+                </div>
+                <div class="c-destaque__btn">
+                  <button>Veja Mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c-destaque__item item"
+            style="background-image: url(/assets/img/destaque\ 3.png)"
+          >
+            <div class="c-destaque__degrade">
+              <img src="assets/img/degradê destaque.png" alt="" />
+            </div>
+            <div class="container-xxl">
+              <div class="c-destaque__content">
+                <div class="c-destaque__titulo col-11 col-md-12 col-lg-10">
+                  <h1>
+                    Os 12 mais poderosos guerreiros entre os Cavaleiros de Atena
+                  </h1>
+                </div>
+                <div class="c-destaque__btn">
+                  <button>Veja Mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="c-destaque__item item"
+            style="background-image: url(/assets/img/destaque\ 4.png)"
+          >
+            <div class="c-destaque__degrade">
+              <img src="assets/img/degradê destaque.png" alt="" />
+            </div>
+            <div class="container-xxl">
+              <div class="c-destaque__content">
+                <div class="c-destaque__titulo col-11 col-md-12 col-lg-10">
+                  <h1>
+                    Generais Marinas: os guerreiros que defendem Poseidon, Deus
+                    dos Mares
+                  </h1>
+                </div>
+                <div class="c-destaque__btn">
+                  <button>Veja Mais</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
-    
-    
-      
+
+        <div class="c-destaque__seta">
+          <a href="#"><img src="assets/img/seta destaque.png" alt="" /></a>
+        </div>
+
+        <div class="container-xxl">
+          <div class="c-destaque__dots">
+            <button data-slide="0" class="active">1</button>
+            <button data-slide="1">2</button>
+            <button data-slide="2">3</button>
+            <button data-slide="3">4</button>
+          </div>
+        </div>
+      </section>
 
       <section class="c-atena">
         <div class="container-xxl">
@@ -577,7 +595,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Touro:</span> 
-                      é a segunda casa zodiacal, com estátuas enormes de touros dourados decorando sua entrada.
+                      a segunda casa zodiacal trás na entrada a escultura da cabeça de um touro em perfil, com grossas colunas dóricas circulando a área externa e interna. Possui várias paredes.
                     "
                   >
                     <img
@@ -588,8 +606,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Touro:</span>
-                    é a segunda casa zodiacal, com estátuas enormes de touros
-                    dourados decorando sua entrada.
+                    a segunda casa zodiacal trás na entrada a escultura da
+                    cabeça de um touro em perfil, com grossas colunas dóricas
+                    circulando a área externa e interna. Possui várias paredes.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -598,7 +617,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Gêmeos:</span> 
-                      é conhecida por seus corredores labirínticos e ilusão de ótica.
+                      a terceira casa possui as laterais a frente da entrada, tendo dois anjos gêmeos esculpidos nas paredes. Quem entra lá, acaba entrando na famosa ilusão que faz um labirinto de luz e sombra (luz e sombra é uma associação com os gêmeos opostos) erguido pela força do cavaleiro que lá protege.
                     "
                   >
                     <img
@@ -609,8 +628,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Gêmeos:</span>
-                    é conhecida por seus corredores labirínticos e ilusão de
-                    ótica.
+                    a terceira casa possui as laterais a frente da entrada,
+                    tendo dois anjos gêmeos esculpidos nas paredes. Quem entra
+                    lá, acaba entrando em uma famosa ilusão.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -619,7 +639,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Câncer:</span> 
-                      famosa pelas portas de carvalho e as imagens sagradas da deusa Hera.
+                      enquanto as paredes interiores são forradas de cabeças humanas, o aspecto exterior da casa trás uma arquitetura similar a de Áries. No todo, a casa parece se abrir em X para os lados. Pelo fato do cavaleiro de Câncer ser o único cavaleiro dourado a enviar pessoas pro Yomotsu Hirasaka (entrada do mundo dos mortos) e pelo fato do aglomerado de estrelas da constelação de Câncer na China (Sekishiki) ser formada de mortos segundo sua mitologia, a casa de Câncer é considerada a mais próxima do Inferno, a antecâmara do Inferno.
                     "
                   >
                     <img
@@ -630,8 +650,10 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Câncer:</span>
-                    famosa pelas portas de carvalho e as imagens sagradas da
-                    deusa Hera.
+                    enquanto as paredes interiores são forradas de cabeças
+                    humanas, o aspecto exterior da casa trás uma arquitetura
+                    similar a de Áries. A casa de Câncer é a mais próxima do
+                    Inferno.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -640,7 +662,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Leão:</span> 
-                      representa o poder e a força do leão, com estátuas imponentes de leões guardando a entrada.
+                      o destaque vai para duas estátuas de leões, postas uma do lado da outra e em posição ameaçadora. As colunas externas e internas são lisas e na fachada, encima da entrada, há o símbolo do leão, por isso, o nome da casa se chama Leo e é conhecida como o Templo do Leão.
                     "
                   >
                     <img
@@ -651,8 +673,10 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Leão:</span>
-                    representa o poder e a força do leão, com estátuas
-                    imponentes de leões guardando a entrada.
+                    o destaque vai para duas estátuas de leões, postas uma do
+                    lado da outra e em posição ameaçadora há o símbolo do leão,
+                    o nome da casa se chama Leo e é conhecida como o Templo do
+                    Leão.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -661,7 +685,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Virgem:</span> 
-                      conhecida pela limpeza e organização, simbolizando a pureza e o cuidado.
+                      a entrada da casa têm duas grandes estátuas de Buda (a esquerda fazendo o selo Roda da Lei, a direita o samâpada) em de pé sobre o que se assemelham a flor de lótus. O cavaleiro de virgem medita em um local no meio da casa, que serve de assento.
                     "
                   >
                     <img
@@ -672,8 +696,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Virgem:</span>
-                    conhecida pela limpeza e organização, simbolizando a pureza
-                    e o cuidado.
+                    a entrada da casa têm duas grandes estátuas de Buda (a
+                    esquerda fazendo o selo Roda da Lei, a direita o samâpada)
+                    em de pé sobre o que se assemelham a flor de lótus.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -682,7 +707,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Libra:</span> 
-                      simboliza equilíbrio, justiça e harmonia, com estátuas de deuses representando a balança da justiça.
+                      a vista aérea da casa revela um desenho poligonal, com uma solitária torre central que lembra vagamente o estilo pagoda. Libra também é o nome da casa e é conhecido como o Templo da Balança.
                     "
                   >
                     <img
@@ -693,8 +718,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Libra:</span>
-                    simboliza equilíbrio, justiça e harmonia, com estátuas de
-                    deuses representando a balança da justiça.
+                    a vista aérea da casa revela um desenho poligonal, com uma
+                    solitária torre central que lembra vagamente o estilo
+                    pagoda.A casa é conhecida como o Templo da Balança.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -715,7 +741,8 @@
                   <p class="mt-3">
                     <span class="highlight">A Casa de Escorpião:</span>
                     conhecida por seus desafios e provas, com escorpiões
-                    dourados protegendo a entrada.
+                    dourados protegendo a entrada. Uma fortaleza de proteção em
+                    torno do Palácio do Grande Mestre e do Templo de Atena.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -724,7 +751,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Sagitário:</span> 
-                      conhecida por sua velocidade e força, com arcos dourados cruzando sua entrada.
+                      na entrada há uma estátua de centauro empunhando arco e flecha. Ao contrária das casas anteriores, só a frente possui colunas de sustentação. Ela é a casa que possuí o testamento de Aiolos, escrita em Grego em uma das suas paredes.
                     "
                   >
                     <img
@@ -735,8 +762,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Sagitário:</span>
-                    conhecida por sua velocidade e força, com arcos dourados
-                    cruzando sua entrada.
+                    na entrada há uma estátua de centauro empunhando arco e
+                    flecha. Ela é a casa que possuí o testamento de Aiolos,
+                    escrita em Grego em uma das suas paredes.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -745,7 +773,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Capricórnio:</span> 
-                      conhecida pela fortaleza e resistência, representada por montanhas imponentes e terras rochosas.
+                      alguns cavaleiros que a habitam se consideravam o cavaleiro mais fiel a Atena e por isso tem uma estátua de Atena nessa casa, o que não permite que o cavaleiro de capricórnio lute lá; existe um segundo andar de onde o cavaleiro observa quem passa por lá. A casa tem o mesmo aspecto da de Sagitário, não possuindo colunas externas no entorno dela, passando um aspecto fechado.
                     "
                   >
                     <img
@@ -756,8 +784,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Capricórnio:</span>
-                    conhecida pela fortaleza e resistência, representada por
-                    montanhas imponentes e terras rochosas.
+                    os cavaleiros que a habitam se consideravam o cavaleiro mais
+                    fiel a Atena e por isso tem uma estátua de Atena nessa casa,
+                    o que não permite que o cavaleiro de capricórnio lute lá.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -766,7 +795,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Aquário:</span> 
-                      representa a inovação e liberdade, com símbolos futuristas e água fluindo em seus caminhos.
+                      é a menor das casa zodiacais, com uma aparência única. Colunas de textura lisa circulam a área externa da construção, sem nenhuma encostar a parede. O telhado se projeta numa área esférica, afunilando-se e dando origem a uma torre.
                     "
                   >
                     <img
@@ -777,8 +806,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Aquário:</span>
-                    representa a inovação e liberdade, com símbolos futuristas e
-                    água fluindo em seus caminhos.
+                    é a menor das casa zodiacais, com uma aparência única entre
+                    as demais. Colunas de textura lisa circulam a área externa
+                    da construção, sem nenhuma encostar a parede.
                   </p>
                 </div>
                 <div class="carousel-item">
@@ -787,7 +817,7 @@
                     data-fancybox="gallery"
                     data-caption="
                       <span class='highlight'>A Casa de Peixes:</span> 
-                      é a última casa zodiacal, representando a espiritualidade e empatia, com símbolos de peixes nadando em águas calmas.
+                      a última casa zodiacal tem colunas sobre plataformas, sendo 6 no total. Nas extremidades da frente do telhado, há duas estátuas depeixes. Pisces é o nome da casa e é conhecido como Templo dos Peixes Gêmeos.
                     "
                   >
                     <img
@@ -798,8 +828,9 @@
                   </a>
                   <p class="mt-3">
                     <span class="highlight">A Casa de Peixes:</span>
-                    é a última casa zodiacal, representando a espiritualidade e
-                    empatia, com símbolos de peixes nadando em águas calmas.
+                    a última casa zodiacal tem colunas sobre plataformas, sendo
+                    6 no total. Nas extremidades da frente do telhado, há duas
+                    estátuas depeixes. Pisces é o nome da casa.
                   </p>
                 </div>
               </div>
@@ -883,55 +914,63 @@
       <section class="c-formulario">
         <div class="container-xxl">
           <div class="row">
-            <div class="c-formulario__content">
+            <div class="c-formulario__content col-12 col-md-12 col-sm-12">
               <div class="c-formulario__titulo">
                 <h1 class="m-0" id="seja">Seja um cavaleiro!</h1>
               </div>
-              <form class="c-formulario__form row g-3">
-                <div class="col-6">
+              <form class="c-formulario__form row g-4">
+                <!-- Nome -->
+                <div class="col-12 col-md-6 col-sm-6">
                   <label for="nome" class="form-label">Nome:</label>
                   <input type="name" class="form-control" id="nome" />
                 </div>
-                <div class="col-6">
+                <!-- E-mail -->
+                <div class="col-12 col-md-6 col-sm-6">
                   <label for="email" class="form-label">E-mail: </label>
                   <input type="email" class="form-control" id="email" />
                 </div>
-                <div class="col-3">
+                <!-- Idade -->
+                <div class="col-6 col-md-3 col-sm-3">
                   <label for="idade" class="form-label">Idade: </label>
                   <input type="number" class="form-control" id="idade" />
                 </div>
-                <div class="col-3">
+                <!-- Altura -->
+                <div class="col-6 col-md-3 col-sm-3">
                   <label for="altura" class="form-label">Altura: </label>
                   <input type="text" class="form-control" id="altura" />
                 </div>
-                <div class="col-3">
+                <!-- Peso -->
+                <div class="col-6 col-md-3 col-sm-3">
                   <label for="peso" class="form-label">Peso: </label>
                   <input type="text" class="form-control" id="peso" />
                 </div>
-                <div class="col-3">
+                <!-- Dia de nascimento -->
+                <div class="col-6 col-md-3 col-sm-3">
                   <label for="nascimento" class="form-label"
-                    >Dia de nascimento:
-                  </label>
+                    >Dia de nascimento:</label
+                  >
                   <input type="date" class="form-control" id="nascimento" />
                 </div>
-                <div class="col-2 m-0">
-                  <label for="sangue" class="form-label"
-                    >Tipo sanguíneo:
-                  </label>
+                <!-- Tipo sanguíneo -->
+                <div class="col-12 col-md-3 col-sm-3">
+                  <label for="sangue" class="form-label">Tipo sanguíneo:</label>
                   <input type="text" class="form-control" id="sangue" />
                 </div>
-                <div class="col-5">
+                <!-- Local de nascimento -->
+                <div class="col-12 col-md-4 col-sm-4">
                   <label for="local" class="form-label"
-                    >Local de nascimento:
-                  </label>
-                  <input type="" class="form-control" id="loca" />
+                    >Local de nascimento:</label
+                  >
+                  <input type="text" class="form-control" id="loca" />
                 </div>
-                <div class="col-5">
+                <!-- Local de treinamento -->
+                <div class="col-12 col-md-5 col-sm-5">
                   <label for="treino" class="form-label"
-                    >Local de treinamento:
-                  </label>
-                  <input type="" class="form-control" id="treino" />
+                    >Local de treinamento:</label
+                  >
+                  <input type="text" class="form-control" id="treino" />
                 </div>
+                <!-- Botão -->
                 <div class="c-formulario__btn">
                   <button type="submit">Registar-se</button>
                 </div>
@@ -941,7 +980,7 @@
         </div>
       </section>
 
-      <section class="c-footer">
+      <footer class="c-footer">
         <div class="container-xxl">
           <div class="c-footer__content">
             <div class="c-footer__logo">
@@ -949,14 +988,13 @@
                 <img src="assets/img/logo.png" alt="Logo" />
               </figure>
             </div>
+            <div class="c-footer__bloco"></div>
             <div class="c-footer__list">
               <ul>
                 <li><a href="#cavaleiros de atena">Cavaleiros de Atena</a></li>
                 <li><a href="">Os 88 cavaleiros</a></li>
                 <li><a href="">Os 12 dourados</a></li>
               </ul>
-            </div>
-            <div class="c-footer__list">
               <ul>
                 <li><a href="">12 casas</a></li>
                 <li><a href="">Seja um cavaleiro!</a></li>
@@ -964,12 +1002,13 @@
             </div>
           </div>
         </div>
-      </section>
+      </footer>
     </main>
 
     <!--SCRIPTS JQUERY E JS-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-<!-- NOTE: prior to v2.2.1 tiny-slider.js need to be in <body> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/carousel/carousel.autoplay.umd.js"></script>
     <script src="OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
